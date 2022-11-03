@@ -34,8 +34,8 @@
                   <tr>
                     <th scope="row"><%=i.id%></th>
                     <td><%= i.name %></td>
-                    <td><%= i.price %></td>
-                    <td><%= i.thumbnail %></td>
+                    <td>$<%= i.price %></td>
+                    <td><img src="<%= i.thumbnail %>" alt="<%= i.id %>" height="50px"></td>
                   </tr>
                   <% })%>
               </tbody>

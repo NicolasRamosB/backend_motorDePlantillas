@@ -9,6 +9,6 @@ router.get("/health", (_req, res) => {
       enviroment: process.env.ENVIRONMENT || "not found",
     });
   })
-router.use("/productos", productosRouter);
+router.use("/products", productosRouter);
 
 module.exports = router;

@@ -15,10 +15,12 @@ app.use(logger('dev'));
 app.set('views', './views')
 app.set('view engine', 'ejs')
 
+// app.set('view engine', 'pug')
+
 app.use("/views", express.static(__dirname + "/views"));
 app.use("/api", indexRouter);
 
-
+const products = new Container();
 
 app.get('/', (_req, res) => {
   res.render('page/index')
@@ -26,14 +28,12 @@ app.get('/', (_req, res) => {
 
 
 app.get('/products', (_req, res) => {
-  const products = new Container();
   res.render('page/products', {products:products.getAll()})
 })
 
 
 app.post('/products', (req, res) => {
   const{id, name, price, thumbnail} = req.body
-  const products = new Container();
   products.saveProduct({id, name, price, thumbnail});
   res.redirect('/');
 })

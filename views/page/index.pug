@@ -1,0 +1,49 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous')
+
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+
+
+    title Nicolas Ramos - Plantillas
+
+body 
+
+div(class="container")
+  nav(class="navbar navbar-expand-lg bg-light")
+    div(class="container-fluid")
+      a(class="navbar-brand" href="#") Desafio 5
+        div(class="navbar-nav")
+          a(class="nav-link active" aria-current="page" href="/") Home
+          a(class="nav-link" href="/products") Productos
+
+    div(class="container")
+      form(method="POST" action="/products")
+        div(class="mb-3")
+          label(for="exampleInputEmail1" class="form-label") Nombre del Producto
+          input(type="text" name="name" class="form-control" id="inputNameProduct")
+
+        div(class="mb-3")
+          label(for="exampleInputPassword1" class="form-label") Precio
+          input(type="number" name="price" class="form-control" id="inputPriceProduct")
+
+
+        div(class="mb-3")
+          label(for="exampleInputPassword1" class="form-label") URL - Imagen
+          input(type="thumbnail" name="thumbnail" class="form-control" id="inputUrl")
+
+        button(type="submit" class="btn btn-primary") Agregar
+
+
+script(src='https://code.jquery.com/jquery-3.2.1.min.js'
+  integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+  crossorigin='anonymous')
+
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
+      integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous')
+
